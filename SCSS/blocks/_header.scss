@@ -1,0 +1,142 @@
+.header {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    &__logo {
+        flex-shrink: 0;
+        margin-right: 44px;
+    }
+
+    &__btn {
+        display: none;
+        width: 28px;
+        height: 17px;
+        background: none;
+        background-image: url("../img/toggler-open.svg");
+        border: none;
+        margin-left: auto;
+    }
+
+    &__link-btn {
+        display: none;
+        max-width: 252px;
+    }
+}
+
+.site-nav {
+    margin-right: auto;
+
+    &__list {
+        display: flex;
+        list-style-type: none;
+    }
+
+    &__link {
+        padding-right: 20px;
+        padding-left: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        color: $main-text-color;
+        opacity: 0.7;
+
+        &:active {
+            opacity: 1;
+        }
+    }
+}
+
+.menu {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .header {
+        &__link {
+            display: none;
+        }
+
+        &__btn {
+            display: block;
+        }
+
+        &__link-btn {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .site-nav {
+        display: none;
+    }
+
+    .menu {
+        padding: 48px 24px;
+        width: 85%;
+        height: 100vh;
+        top: -40px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        z-index: 1;
+        right: 0;
+        background-color: #1B262F;
+
+        &__btn {
+            margin-bottom: 24px;
+            margin-left: auto;
+            width: 22px;
+            height: 23px;
+            border: none;
+            background: none;
+            background-image: url(../img/toggler-close.png);
+            background-repeat: no-repeat;
+        }
+
+        &__line {
+            width: 100%;
+            border: none;
+            height: 1px;
+            background-color: #FBFCFE;
+            opacity: 0.15;
+        }
+
+        &__nav-list {
+            list-style-type: none;
+            text-align: center;
+            margin-top: 43px;
+        }
+
+        &__nav-link {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            color: #FBFCFE;
+            opacity: 0.7;
+        }
+
+        &__link {
+            text-align: center;
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    .menu-open {
+        display: flex;
+        right: 0;
+    }
+}
+
