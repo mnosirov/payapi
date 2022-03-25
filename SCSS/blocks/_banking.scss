@@ -1,0 +1,91 @@
+.banking {
+    padding-bottom: 96px;
+    &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        width: 350px;
+        text-align: center;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    &__img {
+        margin: auto;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.138462px;
+        color: $main-text-color;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 25px;
+        text-align: center;
+        letter-spacing: -0.115385px;
+        color: $main-paragraph-color;
+    }
+}
+
+@media (max-width: 768px) {
+    .banking {
+        padding-bottom: 100px;
+
+        &__item {
+            width: 223px;
+            text-align: center;
+            margin-right: 5px;
+            margin-left: 5px;
+        }
+    
+        &__img {
+            width: 88px;
+            height: 88px;
+        }
+
+        &__title {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    
+        &__text {
+            font-size: 12px;
+            line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .banking {
+        padding-bottom: 80px;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__item {
+            width: 328px;
+            margin-bottom: 48px;
+        }
+    
+        &__img {
+            margin-bottom: 33px;
+            width: 106px;
+            height: 106px;
+        }
+    
+        
+    }
+}
