@@ -1,0 +1,100 @@
+.simple {
+    margin-bottom: 328px;
+
+    &__title {
+        font-family: "DM Serif Display";
+        font-size: 48px;
+        line-height: 56px;
+        color: $main-text-color;
+        margin-bottom: 24px;
+    }
+
+    &__text {
+        width: 445px;
+        height: 56px;
+        font-size: 15px;
+        line-height: 28px;
+        color: $main-paragraph-color;
+    }
+
+    &__box {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__img {
+        position: absolute;
+        z-index: 1;
+        top: -400px;
+        right: -500px;
+    }
+
+    &__image {
+        display: none;
+    }
+}
+
+@media (max-width: 768px)  {
+    .simple {
+
+        &__title {
+            text-align: center;
+        }
+    
+        &__text {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    
+        &__box {
+            position: relative;
+            z-index: 1;
+        }
+    
+        &__img {
+            display: none;
+        }
+
+        &__image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@media (max-witdth: 425px) {
+    .simple {
+
+        &__title {
+            text-align: center;
+            font-size: 36px;
+            line-height: 36px;
+        }
+    
+        &__text {
+            width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    
+        &__box {
+            position: relative;
+            z-index: 1;
+        }
+    
+        &__img {
+            display: none;
+            width: 328px;
+            height: 290px;
+        }
+
+        &__image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
