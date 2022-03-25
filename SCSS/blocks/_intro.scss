@@ -1,0 +1,116 @@
+.intro {
+    background-image: url(../img/intro-img.svg);
+    background-repeat: no-repeat;
+    background-position: top -172px right calc(50% - 455px);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 151px;
+    padding-top: 240px;
+
+    &__container {
+        display: flex;
+    }
+
+    &__content {
+        max-width: 546px;
+    }
+
+    &__title {
+        margin: 0;
+        font-family: "DM Serif Display";
+        font-size: 72px;
+        line-height: 72px;
+        letter-spacing: -0.553846px;
+        color: $main-text-color;
+        padding-bottom: 42px;
+    }
+
+    &__form {
+        position: relative;
+        z-index: 1;
+        border: none;
+        max-width: 445px;
+        width: 100%;
+        height: 48px;
+        display: flex;
+        margin-bottom: 16px;
+    }
+
+    &__input {
+        padding: 15px 27px;
+        padding-right: 180px;
+        border: none;
+        width: 100%;
+        background: #fbfcfe;
+        box-shadow: 10px 10px 25px -10px rgba(54, 83, 107, 0.25);
+        border-radius: 24px;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 18px;
+        color: $main-paragraph-color;
+    }
+}
+
+.form-link {
+    position: absolute;
+    border: none;
+    right: 0%;
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding-top: 484px;
+        text-align: center;
+        background-image: url(../img/intro-mobile.svg);
+        background-position: center top;
+
+        &__content {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        &__title {
+            font-size: 48px;
+            line-height: 56px;
+        }
+
+        &__form {
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        &__text {
+            margin-bottom: 99px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .intro {
+
+        &__title {
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        &__text {
+            font-size: 12px;
+        }
+
+        &__form {
+            flex-direction: column;
+        }
+
+        &__input {
+            padding-right: 26px;
+            margin-bottom: 16px;
+        }
+
+        .form-link {
+            position: relative;
+        }
+    }
+}
